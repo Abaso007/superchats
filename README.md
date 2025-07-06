@@ -1,95 +1,42 @@
-# 🚀 ERA by VYNECT™
+# 🚀 ERA Connect by VYNECT™
 
-**ERA** is a premium JavaScript library for **secure, ethical WhatsApp automation and testing** using direct socket communication. Designed for businesses and developers who demand **speed, control, and simplicity**.
-
----
-
-## 💡 Key Features
-
-- Direct socket connection (no browser)
-- Fast and reliable message automation
-- Media sending and receiving
-- Modular and scalable architecture
-- Built for professional and ethical use cases
-
-> ⚠️ **Important:** ERA is strictly intended for **development, testing, and professional use only**, fully compliant with **WhatsApp's Terms of Service**.
+**ERA Connect** is a premium JavaScript library for **secure, ethical WhatsApp automation and testing** using direct WebSocket communication. Formerly known as **Superchats**, ERA Connect represents the evolution of real-time communication tools built for speed, security, and stability.
 
 ---
 
-## 🛠 Installation
+## 🔑 Key Features
 
-```bash
-npm install era-bot
-```
-
----
-
-## 🚀 Revolutionary Quick Start Example (Simplified)
-
-```javascript
-import ERA from 'era-bot';
-
-// Create session and start instantly
-const client = await ERA.start('YOUR_LICENSE_KEY');
-
-// Send a message (text, image, button, video, audio, document, sticker)
-client.send({
-  to: '+1234567890',
-  type: 'text', // Options: text, image, button, video, audio, document, sticker
-  content: 'Hello! Welcome to ERA.'
-});
-
-// Listen to multiple events in a single block
-client.onEvent((event) => {
-  const { from, body, type } = event;
-
-  console.log(`Event Type: ${type}, From: ${from}, Message: ${body}`);
-
-  if (type === 'message' && body.toLowerCase() === 'hi') {
-    client.send({ to: from, type: 'text', content: 'Hey! How can I help you today?' });
-  }
-
-  if (type === 'message' && body.toLowerCase() === 'photo') {
-    client.send({ to: from, type: 'image', content: 'https://via.placeholder.com/300', caption: 'photo caption' });
-  }
-
-  if (type === 'status') {
-    console.log(`Status update from ${from}: ${body}`);
-  }
-
-  if (type === 'call') {
-    console.log(`Incoming call from ${from}`);
-  }
-
-  // Automatic webhook forwarding
-  client.webhook('https://yourserver.com/webhook', event);
-});
-```
-
-➡️ **What makes this revolutionary?**
-- **ERA.start()** for instant simplified session
-- Unified **client.send()** with flexible message type selection
-- Single **onEvent()** handler for all event types
-- Built-in **webhook()** function for effortless automation
-- No need for complex configuration or multiple listeners
+- Direct WebSocket connection to WhatsApp Web
+- No browser or emulation required
+- Fast, lightweight, and memory efficient
+- Message sending, receiving, and media handling
+- Multi-session support (PRO version)
+- Commercial license available
+- Developed and maintained by **VYNECT™**
 
 ---
 
-## 📄 License
+## 💡 License and Usage
 
-This product is **commercial and licensed** by **VYNECT™**. All rights reserved.
+- The **Freemium** version includes basic features with limitations.
+- The **PRO version** offers unlimited sessions, commercial usage, and priority support.
 
-For commercial licensing, please visit: [vynect.com/era](https://vynect.com/era)
+To purchase a commercial license:  
+👉 [https://www.vynect.com/era-connect](https://www.vynect.com/era-connect)
+
+---
+
+## 🔒 License Terms (Summary)
+
+- Free for personal, non-commercial use only
+- Commercial use requires a valid ERA CONNECT PRO license
+- No redistribution, resale, or modification without written permission
 
 ---
 
 ## 🌐 About VYNECT™
 
-**VYNECT™** builds next-generation automation and digital solutions focused on **speed, connectivity, and innovation**.
+**VYNECT™** is dedicated to creating powerful, secure, and innovative communication solutions. With ERA CONNECT, we are setting a new standard for WhatsApp automation tools worldwide.
 
-Learn more: [vynect.com](https://vynect.com)
-
----
-
-🚀 **The new ERA documentation is coming soon!**  
-📘 **Stay tuned at:** [vynect.com/era](https://vynect.com/era)
+Learn more:  
+👉 [https://www.vynect.com](https://www.vynect.com)
